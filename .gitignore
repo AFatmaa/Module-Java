@@ -1,0 +1,9 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java build output
+out/
+
+# macOS
+.DS_Store
