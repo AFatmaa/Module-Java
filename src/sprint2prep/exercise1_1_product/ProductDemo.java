@@ -1,4 +1,6 @@
-public class Main {
+package sprint2prep.exercise1_1_product;
+
+public class ProductDemo {
     public static void main(String[] args) {
         Product laptop = new Product("Laptop", 900.00);
         Product phone = new Product("Phone", 500.00, 10);

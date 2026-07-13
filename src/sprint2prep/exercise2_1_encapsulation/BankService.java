@@ -1,3 +1,5 @@
+package sprint2prep.exercise2_1_encapsulation;
+
 /**
  * Provides banking operations by using the public methods of BankAccount.
  */

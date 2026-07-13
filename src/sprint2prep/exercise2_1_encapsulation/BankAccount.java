@@ -1,3 +1,5 @@
+package sprint2prep.exercise2_1_encapsulation;
+
 /**
  * Represent a bank account with a private balance.
  * The balance can only be changed through controlled methods.

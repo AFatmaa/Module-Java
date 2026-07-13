@@ -1,3 +1,5 @@
+package sprint2prep.exercise3_2_payments;
+
 /**
  * Represents a direct debit payment method.
  */

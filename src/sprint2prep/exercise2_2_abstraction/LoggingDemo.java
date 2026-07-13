@@ -1,3 +1,5 @@
+package sprint2prep.exercise2_2_abstraction;
+
 /**
  * Runs the abstraction exercise for logging.
  */

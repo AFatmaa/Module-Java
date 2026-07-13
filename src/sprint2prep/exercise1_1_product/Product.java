@@ -1,3 +1,5 @@
+package sprint2prep.exercise1_1_product;
+
 /**
  * Represents a product with a name, price, and stock count.
  */

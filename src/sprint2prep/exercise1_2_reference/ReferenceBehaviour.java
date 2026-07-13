@@ -1,3 +1,7 @@
+package sprint2prep.exercise1_2_reference;
+
+import sprint2prep.exercise1_1_product.Product;
+
 /**
  * Demonstrates how object references work in Java.
  */

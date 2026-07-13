@@ -1,3 +1,5 @@
+package sprint2prep.exercise3_1_polymorphism;
+
 /**
  * Runs performances using instanceof and downcasting.
  * This version shows the less flexible approach.

@@ -1,3 +1,5 @@
+package sprint2prep.exercise3_1_polymorphism;
+
 /**
  * Represents a general animal with a name.
  */

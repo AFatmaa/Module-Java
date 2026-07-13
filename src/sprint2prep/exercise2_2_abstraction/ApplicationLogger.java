@@ -1,3 +1,5 @@
+package sprint2prep.exercise2_2_abstraction;
+
 /**
  * Provides a simple application-level logging API.
  * It hides the file opening, writing and closing steps from other classes.

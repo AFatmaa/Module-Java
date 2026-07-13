@@ -1,3 +1,5 @@
+package sprint2prep.exercise2_2_abstraction;
+
 /**
  * Handles low-level file logging steps.
  */

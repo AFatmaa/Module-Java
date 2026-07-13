@@ -1,3 +1,5 @@
+package sprint2prep.exercise3_1_polymorphism;
+
 /**
  * Runs performances for different animals using polymorphism.
  */

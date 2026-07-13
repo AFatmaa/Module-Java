@@ -1,3 +1,7 @@
+package sprint2prep.exercise3_3_composition;
+
+import sprint2prep.exercise3_2_payments.PaymentMethod;
+
 /**
  * Represents a card payment method.
  */

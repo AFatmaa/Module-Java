@@ -1,3 +1,5 @@
+package sprint2prep.exercise2_1_encapsulation;
+
 public class BankAccountDemo {
     public static void main(String[] args) {
         BankAccount account = new BankAccount();
