@@ -1,4 +1,4 @@
-package exercise1_1_calculator;
+package exercise1_calculator;
 
 public class Calculator {
     public int add(int a, int b) {
@@ -20,4 +20,19 @@ public class Calculator {
 
         return a / b;
     }
+
+    public int square(int a) {
+        return a * a;
+    }
+
+    public double squareRoot(int a) {
+        if (a < 0) {
+            throw new IllegalArgumentException(
+                    "Cannot calculate the square root of a negative number"
+            );
+        }
+        return Math.sqrt(a);
+    }
+
+
 }
