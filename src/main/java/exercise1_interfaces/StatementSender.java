@@ -11,4 +11,11 @@ public interface StatementSender {
      * @param statementContent the bank statement content to send
      */
     void sendStatement(String statementContent);
+
+    /**
+     * Sends the given statement.
+     *
+     * @param statement the statement to send
+     */
+    void sendStatement(Statement statement);
 }

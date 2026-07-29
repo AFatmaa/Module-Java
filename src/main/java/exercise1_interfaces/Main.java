@@ -5,15 +5,15 @@ public class Main {
     public static void main(String[] args) {
         StatementDeliveryService deliveryService = new StatementDeliveryService();
 
-        LetterStatementSender letterSender = new LetterStatementSender();
+        StatementService statementService = new StatementService(deliveryService);
 
-        EmailStatementSender emailStatementSender = new EmailStatementSender();
+        StatementSender letterSender = new LetterStatementSender();
 
-        String statementContent = "Your monthly bank statement is ready.";
+        StatementSender emailSender = new EmailStatementSender();
 
-        deliveryService.deliverStatement(statementContent, letterSender);
+        statementService.createAndSendAllTransactionsMonthlyStatement(emailSender);
 
-        deliveryService.deliverStatement(statementContent, emailStatementSender);
+        statementService.createAndSendOutgoingTransactionsMonthlyStatement(letterSender);
 
     }
 }

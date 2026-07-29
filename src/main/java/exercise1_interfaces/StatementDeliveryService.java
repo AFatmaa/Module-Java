@@ -6,12 +6,22 @@ package exercise1_interfaces;
 public class StatementDeliveryService {
 
     /**
-     * Delivers a statement using the supplied sender.
+     * Delivers statement content using the supplied sender.
      *
      * @param statementContent the statement content to send
      * @param statementSender  the sender used to deliver the statement
      */
     public void deliverStatement(String statementContent, StatementSender statementSender) {
         statementSender.sendStatement(statementContent);
+    }
+
+    /**
+     * Delivers a statement using the supplied sender.
+     *
+     * @param statement       the statement to send
+     * @param statementSender the sender used to deliver the statement
+     */
+    public void deliverStatement(Statement statement, StatementSender statementSender) {
+        statementSender.sendStatement(statement);
     }
 }
