@@ -1,17 +1,24 @@
 package tasks;
 
+import java.time.LocalDate;
+
 /**
  * Represents a task with an additional deadline.
  */
 public class TimedTask extends Task {
-    private final String deadline;
+    private final LocalDate deadline;
 
-    public TimedTask(String description, String deadline) {
+    public TimedTask(String description, LocalDate deadline) {
         super(description);
+
+        if (deadline == null) {
+            throw new IllegalArgumentException("Deadline cannot be null.");
+        }
+
         this.deadline = deadline;
     }
 
-    public String getDeadline() {
+    public LocalDate getDeadline() {
         return deadline;
     }
 

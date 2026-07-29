@@ -5,17 +5,19 @@ import tasks.PriorityTask;
 import tasks.Task;
 import tasks.TimedTask;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         TaskManager taskManager = new TaskManager();
 
         Task task1 = new Task("Clean the room");
 
-        TimedTask task2 = new TimedTask("Complete Java homework", "Friday");
+        TimedTask task2 = new TimedTask("Complete Java homework", LocalDate.of(2026, 8, 1));
 
         PriorityTask task3 = new PriorityTask("Fix the application bug", "High");
 
-        TimedTask task4 = new TimedTask("Prepare for the workshop", "Saturday");
+        TimedTask task4 = new TimedTask("Prepare for the workshop", LocalDate.of(2026, 8, 2));
 
         taskManager.addTask(task1);
         taskManager.addTask(task2);
