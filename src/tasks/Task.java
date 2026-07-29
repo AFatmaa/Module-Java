@@ -12,6 +12,11 @@ public class Task {
     private boolean completed;
 
     public Task(String description) {
+
+        if (description == null) {
+            throw new IllegalArgumentException("Description cannot be null.");
+        }
+
         this.id = nextId;
         nextId++;
 
