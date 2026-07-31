@@ -56,6 +56,38 @@ public class Main {
 
         Map<Student, Integer> studentToGrade = studentDataService.getStudentToGrade();
 
-        System.out.println("Students with grades: " + studentToGrade    );
+        System.out.println("Students with grades: " + studentToGrade);
+
+        String newStudentFirstName = "Fatma";
+        String newStudentLastName = "Arslantas";
+        int newStudentGrade = 48;
+
+        Student newStudent = new Student(newStudentFirstName, newStudentLastName);
+
+        names.add(newStudentFirstName);
+        distinctNames.add(newStudentFirstName);
+        sortedNames.add(newStudentFirstName);
+
+        lastNameToGrade.put(newStudentLastName, newStudentGrade);
+        studentToGrade.put(newStudent, newStudentGrade);
+
+        Student leavingStudent = new Student("Filip", "Pappas");
+
+        names.remove("Filip");
+        distinctNames.remove("Filip");
+        sortedNames.remove("Filip");
+        lastNameToGrade.remove("Pappas");
+        studentToGrade.remove(leavingStudent);
+
+        Student cheatingStudent = new Student("Eryn", "Doe");
+
+        lastNameToGrade.put("Doe", 0);
+        studentToGrade.put(cheatingStudent, 0);
+
+        System.out.println("Final first names: " + names);
+        System.out.println("Final distinct names: " + distinctNames);
+        System.out.println("Final sorted names: " + sortedNames);
+        System.out.println("Final last names with grades: " + lastNameToGrade);
+        System.out.println("Final students with grades: " + studentToGrade);
     }
 }
