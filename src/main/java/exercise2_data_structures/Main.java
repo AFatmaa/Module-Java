@@ -1,8 +1,6 @@
 package exercise2_data_structures;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -89,5 +87,33 @@ public class Main {
         System.out.println("Final sorted names: " + sortedNames);
         System.out.println("Final last names with grades: " + lastNameToGrade);
         System.out.println("Final students with grades: " + studentToGrade);
+
+        Integer highestGrade = Collections.max(studentToGrade.values());
+        Integer lowestGrade = Collections.min(studentToGrade.values());
+
+        System.out.println("Highest grade: " + highestGrade);
+        System.out.println("Lowest grade: " + lowestGrade);
+
+        Map.Entry<Student, Integer> highestGradeEntry =
+                Collections.max(studentToGrade.entrySet(), Map.Entry.comparingByValue());
+
+        Student highestGradeStudent = highestGradeEntry.getKey();
+
+        System.out.println("Student with the highest grade: "
+                + highestGradeStudent.getFirstName()
+                + " "
+                + highestGradeStudent.getLastName()
+                + " - "
+                + highestGradeEntry.getValue()
+        );
+
+        Set<String> duplicateNames = new HashSet<>(names);
+
+        duplicateNames.removeIf(name -> Collections.frequency(names, name) == 1);
+
+        System.out.println(
+                "First names belonging to multiple students: "
+                        + duplicateNames
+        );
     }
 }
