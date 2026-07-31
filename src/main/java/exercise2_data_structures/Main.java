@@ -11,7 +11,9 @@ public class Main {
                 "Eryn",
                 "Filip",
                 "Raquel",
-                "Eryn"
+                "Eryn",
+                "Maya",
+                "Mila"
         };
 
         String[] lastNames = {
@@ -19,7 +21,9 @@ public class Main {
                 "Doe",
                 "Pappas",
                 "Clarke",
-                "Jones"
+                "Jones",
+                "Brown",
+                "Brown"
         };
 
         int[] grades = {
@@ -27,7 +31,9 @@ public class Main {
                 45,
                 35,
                 22,
-                41
+                41,
+                38,
+                42
         };
 
         StudentDataService studentDataService = new StudentDataService(firstNames, lastNames, grades);
@@ -47,5 +53,9 @@ public class Main {
         Map<String, Integer> lastNameToGrade = studentDataService.getLastNameToGrade();
 
         System.out.println("Last names with grades: " + lastNameToGrade);
+
+        Map<Student, Integer> studentToGrade = studentDataService.getStudentToGrade();
+
+        System.out.println("Students with grades: " + studentToGrade    );
     }
 }

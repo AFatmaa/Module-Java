@@ -77,4 +77,19 @@ public class StudentDataService {
         return lastNameToGrade;
     }
 
+    /**
+     * Maps each student to their grade.
+     *
+     * @return a map of students to grades
+     */
+    public Map<Student, Integer> getStudentToGrade() {
+        Map<Student, Integer> studentToGrade = new HashMap<>();
+
+        for (int i = 0; i < firstNames.length; i++) {
+            Student student = new Student(firstNames[i], lastNames[i]);
+            studentToGrade.put(student, grades[i]);
+        }
+
+        return studentToGrade;
+    }
 }
