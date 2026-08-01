@@ -23,11 +23,10 @@ public class FileReaderService {
             throw new IllegalArgumentException("Filename cannot be null.");
         }
 
-        BufferedReader reader = null;
+
         StringBuilder content = new StringBuilder();
 
-        try {
-            reader = new BufferedReader(new FileReader(filename));
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
 
             String line;
             boolean firstLine = true;
@@ -57,14 +56,6 @@ public class FileReaderService {
             System.out.println("The file could not be read: " + exception.getMessage());
             return "";
 
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException exception) {
-                    System.out.println("The file could not be closed: " + exception.getMessage());
-                }
-            }
         }
     }
 }
