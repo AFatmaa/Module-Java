@@ -19,7 +19,7 @@ public class FileLogger {
     }
 
     /**
-     * Writes a line to the log file if the file is open.
+     * Writes a log line if the logger is open.
      *
      * @param line the line to write to the log
      */
