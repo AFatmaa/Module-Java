@@ -1,3 +1,6 @@
+/**
+ * Prints prime numbers up to a defined upper limit.
+ */
 public class PrimeNumbers {
     public static void main(String[] args) {
         int upperLimit = 1000;
